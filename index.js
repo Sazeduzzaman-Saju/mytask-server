@@ -186,8 +186,6 @@ async function run() {
             res.send(result);
         })
 
-
-
     }
     finally {
 
@@ -195,13 +193,6 @@ async function run() {
 
 }
 run().catch(error => console.error(error))
-
-
-
-
-
-
-
 
 
 app.get('/', (req, res) => {
