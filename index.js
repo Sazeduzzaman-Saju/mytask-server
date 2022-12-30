@@ -32,6 +32,7 @@ async function run() {
             const result = await taskCollection.insertOne(data)
             res.send(result)
         })
+        // get All review Data With query 
         app.get('/mytask', async (req, res) => {
             let query = {}
             console.log(req.query.email)
@@ -53,7 +54,7 @@ async function run() {
             const categories = await cursor.toArray();
             res.send(categories)
         })
-
+        // get All review Data With query 
         app.delete('/alltask/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: ObjectId(id) }
@@ -61,6 +62,7 @@ async function run() {
             console.log(result)
             res.send(result)
         })
+        // get All review Data With query 
         app.get('/alltask/:id', async (req, res) => {
             const id = req.params.id;
             console.log(id)
@@ -77,6 +79,7 @@ async function run() {
             const categories = await cursor.toArray();
             res.send(categories)
         })
+        // get All review Data With query 
         app.get('/myimportant', async (req, res) => {
             let query = {}
             console.log(req.query.email)
@@ -97,6 +100,7 @@ async function run() {
             console.log(result)
             res.send(result)
         })
+        // get All review Data With query 
         app.get('/important/:id', async (req, res) => {
             const id = req.params.id;
             console.log(id)
@@ -105,6 +109,7 @@ async function run() {
             console.log(result)
             res.send(result);
         })
+        // get All review Data With query 
         app.delete('/important/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: ObjectId(id) }
@@ -121,12 +126,14 @@ async function run() {
             console.log(result)
             res.send(result)
         })
+        // get All review Data With query 
         app.get('/complete', async (req, res) => {
             const query = {}
             const cursor = completeCollection.find(query);
             const categories = await cursor.toArray();
             res.send(categories)
         })
+        // get All review Data With query 
         app.get('/mycomplete', async (req, res) => {
             let query = {}
             console.log(req.query.email)
@@ -139,7 +146,7 @@ async function run() {
             const result = await cursor.toArray();
             res.send(result)
         })
-
+        // get All review Data With query 
         app.delete('/complete/:id', async (req, res) => {
             const id = req.params.id;
             const query = { _id: ObjectId(id) }
@@ -161,6 +168,7 @@ async function run() {
             const review = await cursor.toArray();
             res.send(review)
         })
+        // get All review Data With query 
         app.put('/complete/:id', async (req, res) => {
             const id = req.params.id;
             const filter = { _id: ObjectId(id) }
@@ -173,6 +181,7 @@ async function run() {
             const result = await usersCollection.updateOne(filter, updatedDoc, options);
             res.send(result);
         })
+        // get All review Data With query 
         app.put('/important/:id', async (req, res) => {
             const id = req.params.id;
             const filter = { _id: ObjectId(id) }
